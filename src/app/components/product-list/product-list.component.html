@@ -1,5 +1,5 @@
-<section>
-  <div class="list--grid">
+<section *ngIf="coffeeList.length">
+  <div class="list--grid" >
     <div class="list--grid-item"  *ngFor="let item of coffeeList" (click)="navigateToDetail(item)">
       <app-product-card [item]="item"></app-product-card>
     </div>

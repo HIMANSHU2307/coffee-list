@@ -1,4 +1,4 @@
-import { createReducer, on } from '@ngrx/store';
+import { createReducer, createSelector, on } from '@ngrx/store';
 
 import { GetApiSuccess, SelectItemSuccess } from './actions';
 
@@ -37,3 +37,16 @@ export const rootReducer = createReducer(initialState,
   on(GetApiSuccess, (state, action) => ({ ...state, coffeeList: state.coffeeList.concat(action.data), pagesLoaded: state.pagesLoaded+1, selectedItem: defaultItem, error: null })),
   on(SelectItemSuccess, (state, action) => ({ ...state, selectedItem: action.data, error: null })),
 )
+
+export const selectItem = (state: RootState) => state.selectedItem;
+export const selectList = (state: RootState) => state.coffeeList;
+
+export const selectCoffeeDetail = createSelector(
+  selectItem,
+  (state: CoffeeItem) => state
+);
+
+export const selectCoffeeList = createSelector(
+  selectList,
+  (CoffeeItem: CoffeeItem[]) => CoffeeItem
+);

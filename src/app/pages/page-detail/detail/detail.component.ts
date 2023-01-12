@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { ngrxRoot } from 'src/app/store';
-import {  defaultItem, RootState } from 'src/app/store/reducer';
+import {  CoffeeItem, defaultItem, RootState, selectCoffeeDetail } from 'src/app/store/reducer';
 
 @Component({
   selector: 'app-detail',
