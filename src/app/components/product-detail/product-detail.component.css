@@ -1,0 +1,46 @@
+.item--detail {
+  margin: auto;
+  padding: 2rem;
+  max-width: 1200px;
+  display: flex;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  flex: 1 1;
+}
+
+.item--content {
+  padding: 2px 16px;
+  width: 100%;
+}
+
+.item--content h2 {
+  margin: 2rem 0;
+  text-align: center;
+  color: var(--primary-app-color);
+}
+
+dt::after {
+  content: ": ";
+}
+
+dt {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+dl {
+  font-size: 1rem;
+}
+
+img {
+  width: 50% !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .item--detail {
+    flex-direction: column;
+  }
+  img {
+    width: 100% !important;
+  }
+}

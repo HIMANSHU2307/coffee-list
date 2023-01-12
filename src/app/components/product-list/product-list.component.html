@@ -1,0 +1,13 @@
+<section>
+  <div class="list--grid">
+    <div class="list--grid-item"  *ngFor="let item of coffeeList" (click)="navigateToDetail(item)">
+      <app-product-card [item]="item"></app-product-card>
+    </div>
+  </div>
+  <div class="list--pagination">
+    <div class="button-wrapper" *ngFor="let number of paginationArray">
+      <button class="pagination-button" [ngStyle]="{'background-color': number===pageNumber ? 'aqua' : 'lightgray' }" (click)="moveList(number)">{{number+1}}</button>
+    </div>
+  </div>
+</section>
+

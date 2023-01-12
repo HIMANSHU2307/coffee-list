@@ -1,0 +1,45 @@
+section {
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+.list--grid {
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  cursor: pointer;
+}
+
+.list--grid-item {
+  padding: 1rem;
+  margin: 1.5rem;
+  font-size: 30px;
+}
+
+.list--pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination-button {
+  cursor: pointer;
+  margin: 2rem 1rem;
+  font-size: 1rem;
+  padding: .5rem;
+  border-radius: 50%;
+  border: none;
+  width: 44px;
+  height: 44px;
+}
+
+@media only screen and (max-width: 767px) {
+  .list--grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .pagination-button {
+    margin: 2rem 0.5rem;
+  }
+}
